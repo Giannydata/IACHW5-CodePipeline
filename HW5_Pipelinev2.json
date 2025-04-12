@@ -167,13 +167,6 @@
                     "s3:GetBucketAcl",
                     "s3:GetBucketLocation"
                   ]
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "secretsmanager:GetSecretValue"
-                  ],
-                  "Resource": "arn:aws:secretsmanager:us-east-1:867344476048:secret:GithubAccess-vlQbqG"
                 }
               ]
             }
@@ -377,13 +370,6 @@
                     }
                   ],
                   "Effect": "Allow"
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "secretsmanager:GetSecretValue"
-                  ],
-                  "Resource": "arn:aws:secretsmanager:us-east-1:867344476048:secret:GithubAccess-vlQbqG"
                 }
               ],
               "Version": "2012-10-17"
