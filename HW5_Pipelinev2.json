@@ -49,18 +49,7 @@
               "Principal": "*",
               "Action": "s3:PutObject",
               "Resource": {
-                "Fn::Join": [
-                  "",
-                  [
-                    {
-                      "Fn::GetAtt": [
-                        "ArtifactBucket",
-                        "Arn"
-                      ]
-                    },
-                    "/*"
-                  ]
-                ]
+                "Fn::Sub": "${ArtifactBucket.Arn}/*"
               },
               "Condition": {
                 "StringNotEquals": {
@@ -147,18 +136,7 @@
                       ]
                     },
                     {
-                      "Fn::Join": [
-                        "",
-                        [
-                          {
-                            "Fn::GetAtt": [
-                              "ArtifactBucket",
-                              "Arn"
-                            ]
-                          },
-                          "/*"
-                        ]
-                      ]
+                      "Fn::Sub": "${ArtifactBucket.Arn}/*"
                     }
                   ],
                   "Action": [
@@ -335,18 +313,7 @@
                       ]
                     },
                     {
-                      "Fn::Join": [
-                        "",
-                        [
-                          {
-                            "Fn::GetAtt": [
-                              "ArtifactBucket",
-                              "Arn"
-                            ]
-                          },
-                          "/*"
-                        ]
-                      ]
+                      "Fn::Sub": "${ArtifactBucket.Arn}/*"
                     }
                   ],
                   "Action": [
